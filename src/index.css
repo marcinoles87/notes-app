@@ -1,0 +1,14 @@
+.notes-list-container{
+  
+}
+
+
+.note-container{ 
+  display: flex;
+  margin: 10px;
+  font-size: 20px;
+  background-color: yellow;
+  padding: 10px;
+  border-radius: 10px;
+ 
+}

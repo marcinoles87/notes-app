@@ -3,7 +3,10 @@ import Note from './Note'
 
 function NotesList() {
   return (
-    <div>
+    <div className='notes-list-container'>
+        <Note></Note>
+        <Note></Note>
+        <Note></Note>
         <Note></Note>
     </div>
   )
