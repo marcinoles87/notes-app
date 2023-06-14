@@ -30,3 +30,17 @@
 .delete-icon{
   margin-left: 20px;
 }
+
+input{
+  width: 90vw;
+  margin: 10px;
+  line-height: 30px;
+  border-radius: 10px;
+  transition: 0.7s ease;
+ 
+}
+
+input:hover{
+  background-color: rgb(63, 57, 57);
+  color:white;
+}
