@@ -8,6 +8,8 @@
 
 .note-container{ 
   display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: 30%;
   min-height: 200px;
   margin: 10px;
@@ -16,4 +18,15 @@
   padding: 10px;
   border-radius: 10px;
  
+}
+
+.note-footer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+}
+
+.delete-icon{
+  margin-left: 20px;
 }

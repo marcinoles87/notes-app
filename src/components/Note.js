@@ -7,7 +7,7 @@ function Note() {
         <span>Hello ! this is note</span>
         <div className='note-footer'>
             <small>13/04/2023</small>
-            <MdDeleteForever></MdDeleteForever>
+            <MdDeleteForever className='delete-icon'></MdDeleteForever>
         </div>
     </div>
   )
