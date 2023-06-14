@@ -1,5 +1,6 @@
 import React from 'react'
 import { MdDeleteForever} from 'react-icons/md'
+import addNote from './AddNote'
 
 function Note( {id , text , date}) {
   return (
