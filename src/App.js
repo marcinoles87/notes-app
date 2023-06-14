@@ -3,9 +3,31 @@ import { useState } from 'react';
 import './App.css';
 import NotesList from './components/NotesList';
 
+
 function App() {
 
-const [note , setNote] = useState('')
+const [notes , setNote] = useState([
+  {
+    id: 1 ,
+    text : "first text" ,
+    date : "15/06/2023"
+  
+  },
+
+  {
+    id: 2 ,
+    text : "second text" ,
+    date : "15/06/2023"
+  
+  },
+
+  {
+    id: 3 ,
+    text : "third text" ,
+    date : "15/06/2023"
+  
+  }
+])
 
 const handleOnChange = (e) => {
   e.preventDefault()
@@ -16,7 +38,7 @@ const handleOnChange = (e) => {
   return (
     <div className="App">
       <input placeholder='add your note' onChange={handleOnChange}></input>
-      <NotesList note={note} setNote={setNote}></NotesList>
+      <NotesList notes={notes} setNote={setNote}></NotesList>
     </div>
   );
 }
