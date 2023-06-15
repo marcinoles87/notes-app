@@ -37,11 +37,14 @@ const handleOnChange = (e) => {
     console.log(inputValue)
 }
 
+const addNote = (text) => {
+  console.log(text);
+}
 
   return (
     <div className="App">
       <input placeholder='add your note' onChange={handleOnChange}></input>
-      <NotesList notes={notes} setNote={setNote}></NotesList>
+      <NotesList notes={notes} setNote={setNote} handleAddNote={addNote}></NotesList>
     </div>
   );
 }

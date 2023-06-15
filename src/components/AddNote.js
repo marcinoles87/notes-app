@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-function AddNote({notes}) {
+function AddNote({notes ,handleAddNote}) {
   let [noteText , setNoteText] = useState('');
 
   const handleOnChange = (e) => {
@@ -9,15 +9,17 @@ function AddNote({notes}) {
     setNoteText(
       valueArea
     )
-
-    console.log(noteText)
   }
 
   const handleClick = () => {
 
+    handleAddNote(noteText)
+
     const date = new Date()
 
     console.log(notes)
+
+    
     notes.push({id:"",text: noteText , date : date })
   }
 
