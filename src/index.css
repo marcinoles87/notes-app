@@ -41,6 +41,18 @@ textarea:focus{
   outline: none;
 }
 
+button{
+  border: none;
+  background-color: white;
+  border-radius: 15px;
+  padding: 5px 10px 5px 10px;
+}
+
+button:hover{
+  background-color: rgb(215, 215, 215);
+  cursor: pointer;
+}
+
 .delete-icon{
   margin-left: 20px;
 }
