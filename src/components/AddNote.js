@@ -13,6 +13,10 @@ function AddNote() {
     console.log(noteText)
   }
 
+  const handleClick = () => {
+    console.log('dziala')
+  }
+
   return (
     <div className='note-container new'>
 
@@ -27,7 +31,7 @@ function AddNote() {
       <div className='note-footer'>
 
         <small>200 Remaining</small>
-        <button className='save'>Save</button>
+        <button className='save' onClick={handleClick}>Save</button>
 
       </div>
     </div>
