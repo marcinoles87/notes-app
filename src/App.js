@@ -31,7 +31,10 @@ const [notes , setNote] = useState([
 
 const handleOnChange = (e) => {
   e.preventDefault()
-  console.log(e.target.value)
+
+  const inputValue = e.target.value.toUpperCase()
+
+    console.log(inputValue)
 }
 
 
