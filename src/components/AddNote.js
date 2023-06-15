@@ -7,7 +7,7 @@ function AddNote() {
     e.preventDefault();
     const valueArea = e.target.value.toUpperCase()
     setNoteText(
-      noteText = valueArea
+      valueArea
     )
 
     console.log(noteText)
@@ -20,6 +20,7 @@ function AddNote() {
           rows='8'
           cols='10'
           placeholder='type to add a note ...'
+          value={noteText}
           onChange={handleOnChange}
       ></textarea>
 
