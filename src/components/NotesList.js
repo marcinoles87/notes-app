@@ -13,7 +13,7 @@ function NotesList({notes , setNote}) {
           id={note.id} 
           text={note.text} 
           date={note.date}></Note> )}
-       <AddNote></AddNote>
+       <AddNote notes={notes}></AddNote>
     </div>
   )
 }

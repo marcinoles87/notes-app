@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 
-function AddNote() {
+function AddNote({notes}) {
   let [noteText , setNoteText] = useState('');
 
   const handleOnChange = (e) => {
-    e.preventDefault();
+    // e.preventDefault();
     const valueArea = e.target.value.toUpperCase()
     setNoteText(
       valueArea
@@ -14,7 +14,10 @@ function AddNote() {
   }
 
   const handleClick = () => {
-    console.log('dziala')
+
+
+    console.log(notes)
+    notes.push({id:"",text: {noteText} , date : "15/06/2023" })
   }
 
   return (
