@@ -15,9 +15,10 @@ function AddNote({notes}) {
 
   const handleClick = () => {
 
+    const date = new Date()
 
     console.log(notes)
-    notes.push({id:"",text: {noteText} , date : "15/06/2023" })
+    notes.push({id:"",text: noteText , date : date })
   }
 
   return (
