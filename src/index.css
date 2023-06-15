@@ -27,6 +27,20 @@
 
 }
 
+.note-container.new{
+  background-color:aquamarine;
+}
+
+textarea{
+  border: none;
+  resize: none;
+  background-color: aquamarine;
+}
+
+textarea:focus{
+  outline: none;
+}
+
 .delete-icon{
   margin-left: 20px;
 }

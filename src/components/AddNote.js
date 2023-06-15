@@ -2,7 +2,7 @@ import React from 'react'
 
 function AddNote() {
   return (
-    <div className='note new'>
+    <div className='note-container new'>
       <textarea
       rows='8'
       cols='10'
