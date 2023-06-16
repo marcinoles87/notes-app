@@ -13,9 +13,16 @@ function AddNote({notes ,handleAddNote}) {
 
   const handleClick = () => {
 
-    handleAddNote(noteText)
+    console.log(noteText.length)
+    if(noteText.length > 0){
+    handleAddNote(noteText);
+    setNoteText('')
+    }else(
+      alert('no match note ... pleas add note ...')
+    )
+  
 
-  setNoteText('')
+  
 
     // const date = new Date()
 
