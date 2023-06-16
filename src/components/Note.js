@@ -2,10 +2,10 @@ import React from 'react'
 import { MdDeleteForever} from 'react-icons/md'
 import addNote from './AddNote'
 
-function Note( {id , text , date}) {
+function Note( {id , text , date , removeNote}) {
   
   const handleClick = () =>{
-    console.log('dziala')
+    removeNote(id)
   }
 
   return (

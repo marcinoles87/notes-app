@@ -52,14 +52,13 @@ const addNote = (text) => {
 }
 
 const removeNote = (id) => {
-  const idNote = notes.filter( item => item.id === id)
-  console.log(idNote)
+  console.log(id)
 }
 
   return (
     <div className="App">
       <input placeholder='add your note' onChange={handleOnChange}></input>
-      <NotesList notes={notes}  handleAddNote={addNote}></NotesList>
+      <NotesList notes={notes}  handleAddNote={addNote} removeNote={removeNote}></NotesList>
     </div>
   );
 }
