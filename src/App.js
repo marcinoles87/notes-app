@@ -49,7 +49,11 @@ const addNote = (text) => {
   const newNotes = [...notes , newNote]
   setNote(newNotes)
 
-  
+}
+
+const removeNote = (id) => {
+  const idNote = notes.filter( item => item.id === id)
+  console.log(idNote)
 }
 
   return (
