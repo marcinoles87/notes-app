@@ -13,7 +13,7 @@ function NotesList({notes , setNote , handleAddNote}) {
           id={note.id} 
           text={note.text} 
           date={note.date}></Note> )}
-       <AddNote notes={notes} handleAddNote={handleAddNote}></AddNote>
+       <AddNote notes={notes} setNote={setNote} handleAddNote={handleAddNote}></AddNote>
     </div>
   )
 }

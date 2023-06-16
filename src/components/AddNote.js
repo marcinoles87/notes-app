@@ -15,13 +15,15 @@ function AddNote({notes ,handleAddNote}) {
 
     handleAddNote(noteText)
 
-    const date = new Date()
+  setNoteText('')
 
-    console.log(notes)
+    // const date = new Date()
 
-    
-    notes.push({id:"",text: noteText , date : date })
-  }
+    // console.log(notes)
+
+    // setNote(
+    // notes.push({id:"",text: noteText , date : date }))
+}
 
   return (
     <div className='note-container new'>

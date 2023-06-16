@@ -38,13 +38,22 @@ const handleOnChange = (e) => {
 }
 
 const addNote = (text) => {
-  console.log(text);
+  const date = new Date();
+  const newNote = {
+    id : Math.random(),
+    text : text ,
+    date : date.toLocaleDateString() ,
+
+  }
+
+  const newNotes = [...notes , newNote]
+  setNote(newNotes)
 }
 
   return (
     <div className="App">
       <input placeholder='add your note' onChange={handleOnChange}></input>
-      <NotesList notes={notes} setNote={setNote} handleAddNote={addNote}></NotesList>
+      <NotesList notes={notes}  handleAddNote={addNote}></NotesList>
     </div>
   );
 }
