@@ -2,12 +2,19 @@ import React, { useState } from 'react'
 
 function AddNote({notes ,handleAddNote}) {
   let [noteText , setNoteText] = useState('');
+  const [count , setCount] = useState(200)
 
   const handleOnChange = (e) => {
     // e.preventDefault();
     const valueArea = e.target.value.toUpperCase()
     setNoteText(
       valueArea
+    )
+
+    const textLength = noteText.length
+    console.log(textLength)
+    setCount(
+      count - textLength
     )
   }
 
@@ -45,7 +52,7 @@ function AddNote({notes ,handleAddNote}) {
 
       <div className='note-footer'>
 
-        <small>200 Remaining</small>
+        <small>{count} Remaining</small>
         <button className='save' onClick={handleClick}>Save</button>
 
       </div>
