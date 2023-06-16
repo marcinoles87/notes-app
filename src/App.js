@@ -48,6 +48,8 @@ const addNote = (text) => {
 
   const newNotes = [...notes , newNote]
   setNote(newNotes)
+
+  
 }
 
   return (

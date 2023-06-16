@@ -9,7 +9,6 @@
 .note-container{ 
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   width: 30%;
   min-height: 200px;
   margin: 10px;
