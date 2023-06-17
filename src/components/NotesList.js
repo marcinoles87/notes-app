@@ -2,7 +2,7 @@ import React from 'react'
 import Note from './Note'
 import AddNote from './AddNote'
 
-function NotesList({notes  , handleAddNote}) {
+function NotesList({notes  , handleAddNote , removeNote}) {
   return (
 
      
@@ -12,8 +12,11 @@ function NotesList({notes  , handleAddNote}) {
           key={note.id} 
           id={note.id} 
           text={note.text} 
-          date={note.date}></Note> )}
-       <AddNote notes={notes}  handleAddNote={handleAddNote}></AddNote>
+          date={note.date}
+          removeNote={removeNote}>
+            
+          </Note> )}
+       <AddNote notes={notes}  handleAddNote={handleAddNote} ></AddNote>
     </div>
   )
 }
