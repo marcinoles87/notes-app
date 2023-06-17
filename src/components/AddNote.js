@@ -7,10 +7,15 @@ function AddNote({notes ,handleAddNote}) {
 
   const handleOnChange = (e) => {
     // e.preventDefault();
+
+    if(remainingCount - e.target.value.length >= 0){
     const valueArea = e.target.value.toUpperCase()
     setNoteText(
       valueArea
     )
+  }else{
+    alert('no more characters ...')
+  }
 
    
   }
@@ -24,16 +29,7 @@ function AddNote({notes ,handleAddNote}) {
     }else(
       alert('no match note ... pleas add note ...')
     )
-  
 
-  
-
-    // const date = new Date()
-
-    // console.log(notes)
-
-    // setNote(
-    // notes.push({id:"",text: noteText , date : date }))
 }
 
   return (
