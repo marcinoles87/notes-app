@@ -11,7 +11,7 @@ function Note( {id , text , date , removeNote}) {
         <span>{text}</span>
         <div className='note-footer'>
             <small>{date}</small>
-            <MdDeleteForever className='delete-icon' onClick={removeNote}></MdDeleteForever>
+            <MdDeleteForever className='delete-icon' onClick={ () => removeNote(id)}></MdDeleteForever>
         </div>
     </div>
   )

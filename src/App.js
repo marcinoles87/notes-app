@@ -53,7 +53,8 @@ const addNote = (text) => {
 
 const removeNote = (id) => {
   console.log(id)
-  notes.filter( (note) => note.id !== id)
+  const newNotes = notes.filter( (note) => note.id !== id)
+  setNote(newNotes)
   
 }
 
