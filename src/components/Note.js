@@ -5,7 +5,7 @@ import addNote from './AddNote'
 function Note( {id , text , date , removeNote}) {
   
   const handleClick = () =>{
-    removeNote(id)
+    
   }
 
   return (
