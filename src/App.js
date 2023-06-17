@@ -52,7 +52,7 @@ const addNote = (text) => {
 }
 
 const removeNote = (id) => {
-  notes.filter( (item) => item.id)
+  notes.filter( (note) => note.id !== id)
 }
 
   return (
