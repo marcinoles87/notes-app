@@ -37,7 +37,7 @@ const handleOnChange = (e) => {
     console.log(inputValue)
   const searchNote = [...notes].filter( (note) => note.text === inputValue)
   console.log(searchNote)
-  if(searchNote.text === inputValue){
+  if(searchNote === inputValue){
   setNote(searchNote) 
   }
 }
