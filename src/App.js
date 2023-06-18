@@ -35,8 +35,8 @@ const handleOnChange = (e) => {
   const inputValue = e.target.value.toUpperCase()
 
     console.log(inputValue)
-  const searchNote = [...notes].filter( (note) => note.text === inputValue)
-  console.log(searchNote)
+  const searchNote = [...notes].filter( (note) => note.text !== inputValue)
+  
   if(searchNote === inputValue){
   setNote(searchNote) 
   }
