@@ -31,19 +31,7 @@ const [notes , setNote] = useState([
   }
 ])
 
-const handleOnChange = () => {
-  // e.preventDefault()
 
-  // const inputValue = e.target.value.toUpperCase()
-
-    // console.log(inputValue)
-  const newNotes = notes.filter( (note) => note.text.includes(searchText))
-
-  console.log(newNotes)
-
-  setNote(newNotes) 
-
-}
 
 
 
@@ -71,8 +59,14 @@ const removeNote = (id) => {
 
   return (
     <div className="App">
-      <Search setSearchText={setSearchText} onChange={handleOnChange}></Search>
-      <NotesList notes={notes}  handleAddNote={addNote} removeNote={removeNote}></NotesList>
+      <Search setSearchText={setSearchText} ></Search>
+
+      <NotesList 
+
+            notes={notes.filter( (note) => note.text.includes(searchText))}  
+            handleAddNote={addNote} 
+            removeNote={removeNote}>
+      </NotesList>
     </div>
   );
 }
