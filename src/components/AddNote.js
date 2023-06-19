@@ -22,7 +22,7 @@ function AddNote({notes ,handleAddNote}) {
 
   const handleClick = () => {
 
-    console.log(noteText.length)
+    
     if(noteText.length > 0){
     handleAddNote(noteText);
     setNoteText('')
