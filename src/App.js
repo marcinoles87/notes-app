@@ -32,9 +32,6 @@ const [notes , setNote] = useState([
 ])
 
 
-
-
-
 const addNote = (text) => {
   const date = new Date();
   const newNote = {
@@ -60,6 +57,7 @@ const removeNote = (id) => {
   return (
     <div className="App">
       <Search setSearchText={setSearchText} ></Search>
+      <button className='btn-toogle'>Toogle</button>
 
       <NotesList 
 
