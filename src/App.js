@@ -2,10 +2,12 @@
 import { useState } from 'react';
 import './App.css';
 import NotesList from './components/NotesList';
+import Search from './components/Search';
 
 
 function App() {
 
+const [searchText , setSearchText] = useState('')
 const [notes , setNote] = useState([
   {
     id: 1 ,
@@ -35,7 +37,7 @@ const handleOnChange = (e) => {
   const inputValue = e.target.value.toUpperCase()
 
     console.log(inputValue)
-  const newNotes = notes.filter( (note) => note.text.includes(inputValue))
+  const newNotes = notes.filter( (note) => note.text.includes(searchText))
 
   setNote(newNotes) 
 
@@ -66,7 +68,7 @@ const removeNote = (id) => {
 
   return (
     <div className="App">
-      <input placeholder='add your note' onChange={handleOnChange}></input>
+      <Search searchText={searchText}></Search>
       <NotesList notes={notes}  handleAddNote={addNote} removeNote={removeNote}></NotesList>
     </div>
   );

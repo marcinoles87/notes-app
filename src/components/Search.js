@@ -1,8 +1,10 @@
 import React from 'react'
 
-function Search() {
+function Search({searchText}) {
   return (
-    <div>Search</div>
+    <div>
+        <input placeholder='search your note...' value={searchText} ></input>
+    </div>
   )
 }
 
