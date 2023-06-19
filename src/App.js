@@ -36,8 +36,6 @@ const handleOnChange = (e) => {
 
     console.log(inputValue)
   const newNotes = notes.filter( (note) => note.text.includes(inputValue))
-  
-  
 
   setNote(newNotes) 
 
