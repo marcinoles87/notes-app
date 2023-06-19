@@ -31,6 +31,7 @@ const [notes , setNote] = useState([
   }
 ])
 
+const [darkMode , setDarkMode] = useState(false)
 
 const addNote = (text) => {
   const date = new Date();
@@ -54,10 +55,15 @@ const removeNote = (id) => {
   
 }
 
+const handleOnClick = () => {
+  setDarkMode(!darkMode)
+}
+
   return (
-    <div className="App">
+    <div className={darkMode ? 'darkMode' : 'App'}>
+      <h1>Notes App</h1>
       <Search setSearchText={setSearchText} ></Search>
-      <button className='btn-toogle'>Toogle</button>
+      <button className='btn-toogle' onClick={handleOnClick}>Toogle</button>
 
       <NotesList 
 

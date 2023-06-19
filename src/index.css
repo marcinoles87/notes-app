@@ -72,4 +72,14 @@ input:hover{
 
 .btn-toogle{
   border: 1px solid black;
+  margin: 10px;
+}
+
+.darkMode{
+  background-color: black;
+
+}
+
+.darkMode h1{
+  color: white;
 }
