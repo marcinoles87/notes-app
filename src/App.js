@@ -31,8 +31,8 @@ const [notes , setNote] = useState([
   }
 ])
 
-const handleOnChange = (e) => {
-  e.preventDefault()
+const handleOnChange = () => {
+  // e.preventDefault()
 
   // const inputValue = e.target.value.toUpperCase()
 
@@ -58,6 +58,7 @@ const addNote = (text) => {
 
   const newNotes = [...notes , newNote]
   setNote(newNotes)
+  setSearchText('')
 
 }
 
