@@ -33,10 +33,17 @@ const [notes , setNote] = useState([
 
 const [darkMode , setDarkMode] = useState(false);
 
+useEffect(() => {
+  const data = JSON.stringify(notes)
+  localStorage.setItem('react-notes-app-data' , data)
+  
+}, [notes])
+
+
 useEffect( () => {
 
   const saveNotes = JSON.parse(
-    localStorage.getItem('react.notes-app-data')
+    localStorage.getItem('react-notes-app-data')
   );
 
   if(saveNotes) {
@@ -45,13 +52,6 @@ useEffect( () => {
 
 } , [])
 
-useEffect(() => {
-  localStorage.setItem(
-    'react-notes-app-data' ,
-    JSON.stringify(notes)
-  )
-  
-}, [notes])
 
 
 
